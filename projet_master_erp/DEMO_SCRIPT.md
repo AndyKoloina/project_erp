@@ -33,14 +33,21 @@ Avant de commencer la démo, voici ce que nous utilisons :
 "Une fois les données créées, notre service ETL entre en jeu. Il extrait les données brutes de l'ERP, les nettoie, et les structure en Schéma en Étoile dans notre Data Warehouse. C'est ici que nous créons nos dimensions Temps, Client et Produit."
 *(Action : Montrer le déclenchement de l'ETL et le status 'Succès')*
 
-### Étape 3 : Dashboard & Intelligence Artificielle (3:30 - 5:00)
-"Voici le cœur visuel du projet : notre Dashboard Streamlit. 
-- Dans l'onglet **Segmentation**, l'algorithme K-Means identifie automatiquement nos clients VIP et ceux à risque. 
-- Dans l'onglet **Prédictions**, le modèle ARIMA anticipe nos ventes sur les 3 prochains mois. 
-- Enfin, notre module **IA Reporting** analyse ces chiffres et rédige un résumé stratégique en langage naturel via une API distante."
-*(Action : Montrer les trois onglets et la génération du rapport IA)*
+### Étape 3 : Analytics & Data Mining (3:30 - 4:45)
+"Nous allons maintenant plonger dans le service Analytics. 
+- En coulisses, notre moteur exécute une segmentation RFM grâce à l'algorithme K-Means de Scikit-Learn. Il analyse la récence, la fréquence et le montant des achats pour classer nos clients. 
+- Parallèlement, nous utilisons des modèles de séries temporelles ARIMA pour prédire la courbe de croissance de nos ventes sur les 90 prochains jours."
+*(Action : Montrer les prédictions et le graphique de segmentation dans Streamlit)*
 
-### Conclusion (5:00 - 5:30)
+### Étape 4 : Reporting IA (4:45 - 5:30)
+"Le module 'IA Reporting' vient couronner le tout. Il récupère les KPIs en temps réel du Warehouse et utilise un LLM (Zephyr via Hugging Face) pour générer automatiquement une synthèse stratégique. C'est du Reporting Narratif (NLG) pur, idéal pour un manager qui veut comprendre l'essentiel en une seconde."
+*(Action : Montrer la génération du rapport IA)*
+
+### Étape 5 : Business Intelligence avec Metabase (5:30 - 6:30)
+"Enfin, pour les analystes qui souhaitent explorer les données sans coder, nous avons intégré Metabase. Comme notre ETL a structuré les données dans un Warehouse propre, Metabase nous permet de créer des dashboards complexes en quelques clics. On peut y voir la répartition géographique de nos clients ou le top des produits les plus rentables."
+*(Action : Ouvrir Metabase sur localhost:3000 et montrer un graphique rapide sur fact_ventes)*
+
+### Conclusion (6:30 - 7:00)
 "Ce projet démontre comment l'IA et la BI peuvent transformer des données brutes en outils de décision stratégique. Merci de votre attention !"
 
 ---

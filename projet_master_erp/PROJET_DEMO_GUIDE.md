@@ -75,7 +75,15 @@ Accédez à l'interface visuelle (`http://localhost:8501`).
 
 ### 6️⃣ Exploration BI (Metabase)
 Pour une analyse plus poussée : `http://localhost:3000`.
--   Connectez-vous à la base `bi_warehouse` pour créer vos propres graphiques.
+
+**Configuration initiale (si nécessaire) :**
+-   **Type de base** : PostgreSQL
+-   **Host** : `db` (depuis Docker) ou `localhost` (si accès direct)
+-   **Base de données** : `bi_warehouse`
+-   **Utilisateur** : `admin` (ou celui du `.env`)
+-   **Mot de passe** : `123456` (ou celui du `.env`)
+
+*Note : L'ETL doit avoir été lancé au moins une fois pour que les tables soient visibles.*
 
 ---
 
