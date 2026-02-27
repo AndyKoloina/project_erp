@@ -50,16 +50,16 @@ Le système est composé de **6 services** orchestrés par Docker :
 
 ### 1️⃣ Initialisation des Données (Master Data)
 Populez l'ERP avec les premiers produits et clients.
--   **Action** : Effectuer une requête POST sur `http://localhost:8000/seed/`
+-   **Action** : Cliquez sur [http://localhost:8000/seed/](http://localhost:8000/seed/)
 -   **Outil** : Navigateur ou Postman.
 
 ### 2️⃣ Génération de Données Massives
 Générez 50+ commandes historiques pour alimenter les modèles d'IA.
--   **Action** : Effectuer une requête POST sur `http://localhost:8000/seed_massive/`
+-   **Action** : Cliquez sur [http://localhost:8000/seed_massive/](http://localhost:8000/seed_massive/)
 
 ### 3️⃣ Lancement de l'ETL
 Transférez les données de l'ERP vers le Data Warehouse BI (Schéma en étoile).
--   **Action** : Effectuer une requête POST sur `http://localhost:8002/trigger`
+-   **Action** : Cliquez sur [http://localhost:8002/trigger](http://localhost:8002/trigger)
 -   **Vérification** : Consultez `http://localhost:8002/status` pour voir les lignes chargées.
 
 ### 4️⃣ Analyse & Data Mining

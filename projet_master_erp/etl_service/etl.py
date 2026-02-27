@@ -159,7 +159,7 @@ def health_check():
 def get_status():
     return etl_status
 
-@app.post("/trigger")
+@app.api_route("/trigger", methods=["GET", "POST"])
 def trigger_now(background_tasks: BackgroundTasks):
     background_tasks.add_task(run_etl_logic)
     return {"msg": "ETL lancé en arrière-plan vers le Data Warehouse !"}

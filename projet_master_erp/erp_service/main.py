@@ -223,7 +223,7 @@ def validate_order(order_id: int, user_id: int):
     db.close()
     return {"status": "VALIDATED", "msg": "Stocks mis à jour avec succès"}
 
-@app.post("/seed/")
+@app.api_route("/seed/", methods=["GET", "POST"])
 def seed_data():
     """Génération du Master Data pour la démo"""
     db = SessionLocal()
@@ -266,7 +266,7 @@ def seed_data():
 
 
 
-@app.post("/seed_massive/")
+@app.api_route("/seed_massive/", methods=["GET", "POST"])
 def seed_massive_data():
     """Génère un gros volume de données pour les graphiques BI et l'IA"""
     db = SessionLocal()
