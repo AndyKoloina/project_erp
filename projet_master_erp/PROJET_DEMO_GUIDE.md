@@ -1,3 +1,12 @@
+## 👥 Équipe Projet (Groupe 4)
+
+- **RANAIVO NRINA ANDY NANTENAINA** (61/MA) S8
+- **CHRYSOSTOME Priscillia**
+- **RANDRIAMIARAMANANA Harivelo Yvan**
+- **Ralalason Rodeo victorieux**
+
+---
+
 # 📖 Guide de Démonstration : ERP & BI Intelligent
 
 Ce projet est une solution complète de gestion (ERP) couplée à une pile décisionnelle (BI) et d'Intelligence Artificielle.
@@ -17,7 +26,19 @@ Le système est composé de **6 services** orchestrés par Docker :
 
 ## 🚀 Installation Rapide
 
-1.  Assurez-vous d'avoir un fichier `.env` à la racine avec les variables nécessaires (DB_USER, DB_PASS, etc.).
+1.  **Configuration des variables d'environnement** :
+    Créez un fichier `.env` à la racine du projet en vous basant sur l'exemple suivant :
+    ```env
+    # Base de données
+    DB_USER=admin
+    DB_PASS=123456
+    DB_NAME_ERP=erp_db
+    DB_NAME_BI=bi_warehouse
+
+    # Token IA (Gratuit sur huggingface.co/settings/tokens)
+    HF_TOKEN=votre_token_huggingface_ici
+    ```
+
 2.  Lancez l'infrastructure :
     ```bash
     docker-compose up -d --build
